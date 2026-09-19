@@ -1,0 +1,55 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+*.egg-info/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Editors and operating systems
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Raw datasets and downloaded archives
+datasets/
+**/raw_data/
+*.tar.gz
+*.zip
+
+# Large model files and cached tensors
+**/cached_features/
+**/checkpoints/
+**/external_models/
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+
+# Generated cue-conflict images
+task1/data/cue_conflicts/candidates/
+
+# Experiment trackers
+wandb/
+runs/
+lightning_logs/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# LaTeX build files
+report/*.aux
+report/*.log
+report/*.out
+report/*.bbl
+report/*.blg
+report/*.synctex.gz
