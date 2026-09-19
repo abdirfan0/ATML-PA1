@@ -1,0 +1,75 @@
+seed: 6304
+
+dataset:
+  name: STL10
+  image_size: 224
+  train_fraction: 0.8
+  validation_fraction: 0.2
+  test_subset_size: 500
+  test_images_per_class: 50
+  classes:
+    - airplane
+    - bird
+    - car
+    - cat
+    - deer
+    - dog
+    - horse
+    - monkey
+    - ship
+    - truck
+
+models:
+  resnet50:
+    weights: IMAGENET1K_V2
+    feature_dimension: 2048
+  vit_b_16:
+    weights: IMAGENET1K_V1
+    feature_dimension: 768
+  clip_vit_b_32:
+    architecture: ViT-B-32-quickgelu
+    pretrained: openai
+    feature_dimension: 512
+
+linear_probe:
+  optimizer: AdamW
+  learning_rate: 0.001
+  weight_decay: 0.0001
+  maximum_epochs: 50
+  early_stopping_patience: 5
+  feature_batch_size: 64
+  head_batch_size: 256
+
+color_interventions:
+  grayscale: true
+  hue_rotation_factor: 0.25
+
+translation:
+  displacements: [0, 8, 16, 32]
+  directions: [up, down, left, right]
+  padding_mode: reflect
+
+patch_shuffle:
+  grid_size: 4
+
+cue_conflicts:
+  method: AdaIN
+  style_strength: 0.8
+  candidates_per_direction: 30
+  selected_per_direction: 20
+  class_pairs:
+    - [airplane, bird]
+    - [car, cat]
+    - [deer, ship]
+    - [dog, truck]
+    - [horse, monkey]
+
+representation:
+  method: tsne
+  visualization_subset_size: 200
+  images_per_class: 20
+  pca_components: 50
+  perplexity: 30
+  learning_rate: auto
+  initialization: pca
+  maximum_iterations: 1000
