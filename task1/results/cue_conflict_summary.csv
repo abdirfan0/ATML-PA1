@@ -1,0 +1,5 @@
+model,evaluation,n_shape,n_texture,n_other,n_total,shape_bias_percent,coverage_percent
+resnet50,linear_head,85,47,68,200,64.39393939393939,66.0
+vit_b_16,linear_head,134,13,53,200,91.15646258503402,73.5
+clip_vit_b_32,linear_head,150,8,42,200,94.9367088607595,79.0
+clip_vit_b_32,zero_shot,157,16,27,200,90.7514450867052,86.5

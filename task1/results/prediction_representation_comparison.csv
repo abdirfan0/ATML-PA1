@@ -1,0 +1,13 @@
+model,evaluation,intervention,prediction_consistency,mean_cosine_stability,accuracy_change
+resnet50,linear_head,grayscale,0.964,0.7884370684623718,-0.018
+resnet50,linear_head,patch_shuffle,0.9,0.7177631855010986,-0.0999999999999999
+vit_b_16,linear_head,grayscale,0.95,0.7393350601196289,-0.02
+vit_b_16,linear_head,patch_shuffle,0.918,0.6533676385879517,-0.0679999999999999
+clip_vit_b_32,linear_head,grayscale,0.97,0.8982993960380554,-0.022
+clip_vit_b_32,zero_shot,grayscale,0.972,0.8982993960380554,-0.01
+clip_vit_b_32,linear_head,patch_shuffle,0.842,0.7289535403251648,-0.15
+clip_vit_b_32,zero_shot,patch_shuffle,0.814,0.7289535403251648,-0.164
+clip_vit_b_32,linear_head,translation_32px,0.9875,0.9699154794216156,-0.0095
+clip_vit_b_32,zero_shot,translation_32px,0.9825,0.9699154794216156,-0.0135
+resnet50,linear_head,translation_32px,0.9865,0.9327362924814224,-0.011
+vit_b_16,linear_head,translation_32px,0.976,0.9417605549097061,-0.01
