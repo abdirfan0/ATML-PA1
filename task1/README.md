@@ -45,3 +45,9 @@ A GPU-enabled Colab runtime is recommended.
 Raw datasets, model checkpoints, cached feature tensors, external AdaIN weights, and the 300 generated cue-conflict candidate images are excluded from Git.
 
 The metadata recording candidate generation, manual review decisions, and the final balanced 200-image selection is included.
+
+## Repository validation
+
+From the repository root, validate the committed Task 1 artifacts with:
+
+    python task1/scripts/validate_task1.py
