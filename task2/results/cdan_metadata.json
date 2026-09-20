@@ -1,0 +1,42 @@
+{
+  "method": "cdan",
+  "seed": 6304,
+  "domain_loss_weight": 1.0,
+  "maximum_grl_strength": 0.1,
+  "gradient_clip_norm": 1.0,
+  "feature_dimension": 512,
+  "number_of_classes": 7,
+  "conditional_dimension": 3584,
+  "selected_epoch": 11,
+  "selection_metric": "mean_source_validation_macro_f1",
+  "selection_score": 0.935145377706295,
+  "checkpoint_filename": "cdan_best.pt",
+  "target_images_used_during_training": true,
+  "target_labels_used": false,
+  "source_validation": {
+    "photo": {
+      "accuracy": 0.9670658682634731,
+      "macro_f1": 0.9645593559247339,
+      "loss": 0.152821320705785,
+      "number_of_samples": 334
+    },
+    "art_painting": {
+      "accuracy": 0.9,
+      "macro_f1": 0.9001439382211467,
+      "loss": 0.4355581530710546,
+      "number_of_samples": 410
+    },
+    "cartoon": {
+      "accuracy": 0.9360341151385928,
+      "macro_f1": 0.9407328389730046,
+      "loss": 0.2449639753492148,
+      "number_of_samples": 469
+    }
+  },
+  "aggregate_source_validation": {
+    "mean_accuracy": 0.934366661134022,
+    "worst_accuracy": 0.9,
+    "mean_macro_f1": 0.935145377706295,
+    "worst_macro_f1": 0.9001439382211467
+  }
+}

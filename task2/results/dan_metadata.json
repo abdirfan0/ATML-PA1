@@ -1,0 +1,37 @@
+{
+  "method": "dan",
+  "seed": 6304,
+  "mmd_weight": 1.0,
+  "selected_epoch": 7,
+  "selection_metric": "mean_source_validation_macro_f1",
+  "selection_score": 0.9397854027405872,
+  "checkpoint_filename": "dan_best.pt",
+  "target_images_used_during_training": true,
+  "target_labels_used": false,
+  "source_validation": {
+    "photo": {
+      "accuracy": 0.9730538922155688,
+      "macro_f1": 0.9693083966655653,
+      "loss": 0.14283752298640634,
+      "number_of_samples": 334
+    },
+    "art_painting": {
+      "accuracy": 0.8951219512195122,
+      "macro_f1": 0.8963366123967311,
+      "loss": 0.32587670058738893,
+      "number_of_samples": 410
+    },
+    "cartoon": {
+      "accuracy": 0.9488272921108742,
+      "macro_f1": 0.9537111991594652,
+      "loss": 0.20703737771333153,
+      "number_of_samples": 469
+    }
+  },
+  "aggregate_source_validation": {
+    "mean_accuracy": 0.9390010451819851,
+    "worst_accuracy": 0.8951219512195122,
+    "mean_macro_f1": 0.9397854027405872,
+    "worst_macro_f1": 0.8963366123967311
+  }
+}

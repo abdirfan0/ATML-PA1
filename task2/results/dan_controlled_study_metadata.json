@@ -1,0 +1,45 @@
+{
+  "study": "dan_mmd_weight",
+  "seed": 6304,
+  "tested_values": [
+    0.1,
+    1.0,
+    10.0
+  ],
+  "selection_data": "source_validation_only",
+  "target_labels_used": false,
+  "fixed_bandwidth_multipliers": [
+    0.5,
+    1.0,
+    2.0
+  ],
+  "gradient_clip_norm": 1.0,
+  "selected_mmd_weight": 1.0,
+  "selected_mean_source_macro_f1": 0.9397854027405872,
+  "results": [
+    {
+      "mmd_weight": 0.1,
+      "selected_epoch": 6,
+      "mean_source_accuracy": 0.933534096713744,
+      "mean_source_macro_f1": 0.9343684527757028,
+      "worst_source_accuracy": 0.8902439024390244,
+      "worst_source_macro_f1": 0.8950638985961621
+    },
+    {
+      "mmd_weight": 1.0,
+      "selected_epoch": 7,
+      "mean_source_accuracy": 0.9390010451819851,
+      "mean_source_macro_f1": 0.9397854027405872,
+      "worst_source_accuracy": 0.8951219512195122,
+      "worst_source_macro_f1": 0.8963366123967311
+    },
+    {
+      "mmd_weight": 10.0,
+      "selected_epoch": 1,
+      "mean_source_accuracy": 0.21656837139595686,
+      "mean_source_macro_f1": 0.05066996495567924,
+      "worst_source_accuracy": 0.17270788912579957,
+      "worst_source_macro_f1": 0.04207792207792208
+    }
+  ]
+}

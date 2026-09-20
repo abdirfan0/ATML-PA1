@@ -1,0 +1,76 @@
+{
+  "target_domain": "sketch",
+  "number_of_target_samples": 3929,
+  "class_names": [
+    "dog",
+    "elephant",
+    "giraffe",
+    "guitar",
+    "horse",
+    "house",
+    "person"
+  ],
+  "checkpoint_selection": "mean source-validation macro-F1",
+  "target_evaluated_after_selection": true,
+  "target_labels_used_for_training": false,
+  "target_labels_used_for_tuning": false,
+  "dan_selected_mmd_weight": 1.0,
+  "dann_maximum_grl_strength": 0.1,
+  "cdan_maximum_grl_strength": 0.1,
+  "target_results": [
+    {
+      "method": "cdan",
+      "selected_epoch": 11,
+      "source_selection_macro_f1": 0.935145377706295,
+      "target_accuracy": 0.804530414863833,
+      "target_macro_f1": 0.8118815736716278
+    },
+    {
+      "method": "source_only",
+      "selected_epoch": 12,
+      "source_selection_macro_f1": 0.9366743407680399,
+      "target_accuracy": 0.6482565538304912,
+      "target_macro_f1": 0.6240024389156957
+    },
+    {
+      "method": "dan",
+      "selected_epoch": 7,
+      "source_selection_macro_f1": 0.9397854027405872,
+      "target_accuracy": 0.5797912954950369,
+      "target_macro_f1": 0.5503439557639801
+    },
+    {
+      "method": "dann",
+      "selected_epoch": 13,
+      "source_selection_macro_f1": 0.9518411317192492,
+      "target_accuracy": 0.04224993637057776,
+      "target_macro_f1": 0.013454860210762202
+    }
+  ],
+  "domain_separability": [
+    {
+      "method": "source_only",
+      "domain_accuracy": 0.98559670781893,
+      "domain_balanced_accuracy": 0.98559670781893,
+      "domain_roc_auc": 0.9996782333316397
+    },
+    {
+      "method": "dan",
+      "domain_accuracy": 0.8888888888888888,
+      "domain_balanced_accuracy": 0.8888888888888888,
+      "domain_roc_auc": 0.9449778997104099
+    },
+    {
+      "method": "dann",
+      "domain_accuracy": 0.9979423868312757,
+      "domain_balanced_accuracy": 0.9979423868312758,
+      "domain_roc_auc": 1.0
+    },
+    {
+      "method": "cdan",
+      "domain_accuracy": 0.9917695473251029,
+      "domain_balanced_accuracy": 0.9917695473251029,
+      "domain_roc_auc": 0.9997798438584904
+    }
+  ]
+}

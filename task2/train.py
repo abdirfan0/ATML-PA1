@@ -153,6 +153,7 @@ def train_task2_method(
     domain_discriminator=None,
     method_parameters=None,
     number_of_classes=7,
+    gradient_clip_norm=1.0,
 ):
     model = model.to(device)
 
@@ -335,6 +336,21 @@ def train_task2_method(
                 )
 
             total_loss.backward()
+
+            parameters_with_gradients = [
+                parameter
+                for parameter_group
+                in optimizer.param_groups
+                for parameter
+                in parameter_group["params"]
+                if parameter.grad is not None
+            ]
+
+            torch.nn.utils.clip_grad_norm_(
+                parameters_with_gradients,
+                max_norm=gradient_clip_norm,
+            )
+
             optimizer.step()
 
             total_loss_sum += float(
