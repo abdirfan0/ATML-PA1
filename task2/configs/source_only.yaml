@@ -1,0 +1,8 @@
+
+method:
+  name: source_only
+  uses_unlabeled_target: false
+  classification_loss_weight: 1.0
+
+checkpoint:
+  filename: source_only_best.pt

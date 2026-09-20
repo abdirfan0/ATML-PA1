@@ -1,0 +1,18 @@
+
+method:
+  name: dann
+  uses_unlabeled_target: true
+  classification_loss_weight: 1.0
+  domain_loss_weight: 1.0
+  maximum_grl_strength: 1.0
+  grl_schedule_coefficient: 10.0
+
+discriminator:
+  input_dimension: 512
+  hidden_dimension: 256
+  activation: relu
+  dropout_probability: 0.5
+  number_of_outputs: 2
+
+checkpoint:
+  filename: dann_best.pt

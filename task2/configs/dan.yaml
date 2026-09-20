@@ -1,0 +1,15 @@
+
+method:
+  name: dan
+  uses_unlabeled_target: true
+  classification_loss_weight: 1.0
+  mmd_weight: 1.0
+  kernel: multi_rbf
+  bandwidth_multipliers:
+    - 0.5
+    - 1.0
+    - 2.0
+  bandwidth_statistic: median_pairwise_squared_distance
+
+checkpoint:
+  filename: dan_best.pt
