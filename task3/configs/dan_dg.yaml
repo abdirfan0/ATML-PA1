@@ -1,0 +1,20 @@
+method:
+  name: dan_dg
+  classification_loss_weight: 1.0
+  mmd_weight: 1.0
+  alignment: mean_pairwise_source_mmd
+  source_domain_pairs:
+  - - photo
+    - art_painting
+  - - photo
+    - cartoon
+  - - art_painting
+    - cartoon
+  kernel: multi_rbf
+  bandwidth_multipliers:
+  - 0.5
+  - 1.0
+  - 2.0
+  bandwidth_statistic: median_pairwise_squared_distance
+checkpoint:
+  filename: dan_dg_best.pt

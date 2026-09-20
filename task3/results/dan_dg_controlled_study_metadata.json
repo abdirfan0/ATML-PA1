@@ -1,0 +1,41 @@
+{
+  "study_method": "dan_dg",
+  "parameter": "mmd_weight",
+  "tested_values": [
+    0.1,
+    1.0,
+    10.0
+  ],
+  "main_comparison_value": 1.0,
+  "best_source_validation_value": 0.1,
+  "selection_data": "source_validation_only",
+  "target_images_loaded": false,
+  "target_labels_used": false,
+  "target_results_used_to_choose_study": false,
+  "results": [
+    {
+      "mmd_weight": 0.1,
+      "selected_epoch": 13,
+      "mean_source_accuracy": 0.9472282020804198,
+      "mean_source_macro_f1": 0.9485386903304263,
+      "worst_source_accuracy": 0.9048780487804878,
+      "worst_source_macro_f1": 0.9087739996031188
+    },
+    {
+      "mmd_weight": 1.0,
+      "selected_epoch": 1,
+      "mean_source_accuracy": 0.21656837139595678,
+      "mean_source_macro_f1": 0.05066996495567919,
+      "worst_source_accuracy": 0.1727078891257995,
+      "worst_source_macro_f1": 0.042077922077922
+    },
+    {
+      "mmd_weight": 10.0,
+      "selected_epoch": 2,
+      "mean_source_accuracy": 0.21656837139595686,
+      "mean_source_macro_f1": 0.05066996495567924,
+      "worst_source_accuracy": 0.17270788912579957,
+      "worst_source_macro_f1": 0.04207792207792208
+    }
+  ]
+}

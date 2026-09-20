@@ -1,0 +1,42 @@
+{
+  "method": "sam",
+  "seed": 6304,
+  "rho": 0.05,
+  "adaptive": false,
+  "base_optimizer": "AdamW",
+  "learning_rate": 0.0001,
+  "weight_decay": 0.0001,
+  "gradient_clip_norm": 1.0,
+  "selected_epoch": 11,
+  "selection_metric": "mean_source_validation_macro_f1",
+  "selection_score": 0.9515140737316559,
+  "checkpoint_filename": "sam_best.pt",
+  "target_images_loaded": false,
+  "target_labels_used": false,
+  "source_validation": {
+    "photo": {
+      "accuracy": 0.9670658682634731,
+      "macro_f1": 0.9622677065220303,
+      "loss": 0.10246352021565694,
+      "number_of_samples": 334
+    },
+    "art_painting": {
+      "accuracy": 0.9219512195121952,
+      "macro_f1": 0.9239444762879704,
+      "loss": 0.2269501229611839,
+      "number_of_samples": 410
+    },
+    "cartoon": {
+      "accuracy": 0.9637526652452025,
+      "macro_f1": 0.968330038384967,
+      "loss": 0.11738831935915103,
+      "number_of_samples": 469
+    }
+  },
+  "aggregate_source_validation": {
+    "mean_accuracy": 0.950923251006957,
+    "worst_accuracy": 0.9219512195121952,
+    "mean_macro_f1": 0.9515140737316559,
+    "worst_macro_f1": 0.9239444762879704
+  }
+}

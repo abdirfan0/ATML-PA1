@@ -1,0 +1,38 @@
+seed: 6304
+dataset:
+  name: PACS
+  source_domains:
+  - photo
+  - art_painting
+  - cartoon
+  reserved_target_domain: sketch
+  number_of_classes: 7
+  source_split_path: shared/splits/pacs_sketch_seed6304.json
+data_policy:
+  load_target_during_training: false
+  load_target_during_selection: false
+  load_target_during_diagnostics: false
+  target_access_stage: final_evaluation_only
+model:
+  architecture: resnet18
+  weights: IMAGENET1K_V1
+  feature_dimension: 512
+  number_of_classes: 7
+  freeze_batchnorm_running_statistics: true
+  train_batchnorm_affine_parameters: true
+batching:
+  examples_per_source_domain: 8
+  total_source_batch_size: 24
+  evaluation_batch_size: 64
+  number_of_workers: 0
+optimization:
+  optimizer: AdamW
+  learning_rate: 0.0001
+  weight_decay: 0.0001
+  maximum_epochs: 30
+  early_stopping_patience: 5
+  gradient_clip_norm: 1.0
+selection:
+  metric: mean_source_validation_macro_f1
+  use_target_images: false
+  use_target_labels: false

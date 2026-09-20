@@ -1,0 +1,14 @@
+study:
+  method: dan_dg
+  parameter: mmd_weight
+  values:
+  - 0.1
+  - 1.0
+  - 10.0
+  main_comparison_value: 1.0
+  selection_data: source_validation_only
+  target_results_used_to_choose_study: false
+preregistered_expectation:
+  source_domain_separability: Expected to decrease as MMD weight increases.
+  source_classification: Excessive alignment may remove class information.
+  unseen_target_performance: Not assumed to improve monotonically with alignment.

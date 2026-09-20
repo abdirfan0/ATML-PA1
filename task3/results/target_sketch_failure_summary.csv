@@ -1,0 +1,5 @@
+method,true_class,predicted_class,confusion_count,true_class_total,confusion_rate
+erm,elephant,dog,233,740,0.31486486486486487
+dan_dg,horse,person,816,816,1.0
+sam,elephant,dog,416,740,0.5621621621621622
+dan_dg_lambda_0p1,giraffe,dog,155,753,0.2058432934926959

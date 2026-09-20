@@ -1,0 +1,90 @@
+{
+  "seed": 6304,
+  "target_domain": "sketch",
+  "number_of_target_samples": 3929,
+  "target_evaluation_timing": "after all training, checkpoint selection, controlled-study choices, and source diagnostics were fixed",
+  "main_methods": [
+    "erm",
+    "dan_dg",
+    "sam"
+  ],
+  "controlled_study_methods": [
+    "dan_dg_lambda_0p1",
+    "dan_dg_lambda_10p0"
+  ],
+  "main_dan_dg_weight": 1.0,
+  "main_sam_radius": 0.05,
+  "checkpoints": {
+    "erm": {
+      "selected_epoch": 12,
+      "source_selection_macro_f1": 0.9366743407680399
+    },
+    "dan_dg": {
+      "selected_epoch": 1,
+      "source_selection_macro_f1": 0.05066996495567924
+    },
+    "sam": {
+      "selected_epoch": 11,
+      "source_selection_macro_f1": 0.9515140737316559
+    },
+    "dan_dg_lambda_0p1": {
+      "selected_epoch": 13,
+      "source_selection_macro_f1": 0.9485386903304263
+    },
+    "dan_dg_lambda_10p0": {
+      "selected_epoch": 2,
+      "source_selection_macro_f1": 0.05066996495567924
+    }
+  },
+  "target_results": [
+    {
+      "method": "dan_dg_lambda_0p1",
+      "selected_epoch": 13,
+      "source_selection_macro_f1": 0.9485386903304263,
+      "target_accuracy": 0.7146856706541105,
+      "target_macro_f1": 0.7132503788141097,
+      "target_loss": 0.897921621799469
+    },
+    {
+      "method": "sam",
+      "selected_epoch": 11,
+      "source_selection_macro_f1": 0.9515140737316559,
+      "target_accuracy": 0.6042249936370577,
+      "target_macro_f1": 0.6300857083498398,
+      "target_loss": 1.1336476802825928
+    },
+    {
+      "method": "erm",
+      "selected_epoch": 12,
+      "source_selection_macro_f1": 0.9366743407680399,
+      "target_accuracy": 0.6482565538304912,
+      "target_macro_f1": 0.6240024389156957,
+      "target_loss": 1.6438179016113281
+    },
+    {
+      "method": "dan_dg",
+      "selected_epoch": 1,
+      "source_selection_macro_f1": 0.05066996495567924,
+      "target_accuracy": 0.04072283023670145,
+      "target_macro_f1": 0.011179820424134438,
+      "target_loss": 1.9575154781341553
+    },
+    {
+      "method": "dan_dg_lambda_10p0",
+      "selected_epoch": 2,
+      "source_selection_macro_f1": 0.05066996495567924,
+      "target_accuracy": 0.04072283023670145,
+      "target_macro_f1": 0.011179820424134438,
+      "target_loss": 1.9652215242385864
+    }
+  ],
+  "class_names": [
+    "dog",
+    "elephant",
+    "giraffe",
+    "guitar",
+    "horse",
+    "house",
+    "person"
+  ]
+}

@@ -1,0 +1,8 @@
+method:
+  name: sam
+  rho: 0.05
+  adaptive: false
+  classification_loss_weight: 1.0
+  two_forward_backward_passes: true
+checkpoint:
+  filename: sam_best.pt

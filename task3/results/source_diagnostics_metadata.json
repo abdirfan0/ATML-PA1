@@ -1,0 +1,85 @@
+{
+  "seed": 6304,
+  "methods": [
+    "erm",
+    "dan_dg",
+    "sam"
+  ],
+  "target_images_loaded": false,
+  "target_labels_used": false,
+  "domain_separability": {
+    "source_domains": [
+      "photo",
+      "art_painting",
+      "cartoon"
+    ],
+    "samples_per_domain": 334,
+    "split": "70/30 stratified",
+    "split_seed": 6304,
+    "classifier": "multinomial logistic regression",
+    "classifier_C": 1.0,
+    "chance_accuracy": 0.3333333333333333,
+    "results": [
+      {
+        "method": "erm",
+        "domain_accuracy": 0.8837209302325582,
+        "domain_balanced_accuracy": 0.8834653465346535
+      },
+      {
+        "method": "dan_dg",
+        "domain_accuracy": 0.4983388704318937,
+        "domain_balanced_accuracy": 0.498019801980198
+      },
+      {
+        "method": "sam",
+        "domain_accuracy": 0.8770764119601329,
+        "domain_balanced_accuracy": 0.8767986798679868
+      }
+    ]
+  },
+  "sharpness_proxy": {
+    "radius": 0.05,
+    "samples_per_domain": 32,
+    "total_samples": 96,
+    "batch_seed": 6304,
+    "model_mode": "evaluation",
+    "perturbation": "one normalized gradient-ascent step",
+    "results": [
+      {
+        "method": "erm",
+        "original_loss": 0.16833536326885223,
+        "perturbed_loss": 0.6460604071617126,
+        "sharpness_delta": 0.4777250289916992,
+        "gradient_norm": 7.379428863525391
+      },
+      {
+        "method": "dan_dg",
+        "original_loss": 1.9416040182113647,
+        "perturbed_loss": 2.003553867340088,
+        "sharpness_delta": 0.061949849128723145,
+        "gradient_norm": 0.7891664505004883
+      },
+      {
+        "method": "sam",
+        "original_loss": 0.1746133416891098,
+        "perturbed_loss": 0.31383928656578064,
+        "sharpness_delta": 0.13922594487667084,
+        "gradient_norm": 2.4748499393463135
+      }
+    ]
+  },
+  "selected_checkpoints": {
+    "erm": {
+      "selected_epoch": 12,
+      "selection_score": 0.9366743407680399
+    },
+    "dan_dg": {
+      "selected_epoch": 1,
+      "selection_score": 0.05066996495567924
+    },
+    "sam": {
+      "selected_epoch": 11,
+      "selection_score": 0.9515140737316559
+    }
+  }
+}

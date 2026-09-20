@@ -1,0 +1,58 @@
+{
+  "method": "dan_dg",
+  "seed": 6304,
+  "mmd_weight": 1.0,
+  "alignment": "mean pairwise source-domain MMD",
+  "source_domain_pairs": [
+    [
+      "photo",
+      "art_painting"
+    ],
+    [
+      "photo",
+      "cartoon"
+    ],
+    [
+      "art_painting",
+      "cartoon"
+    ]
+  ],
+  "bandwidth_multipliers": [
+    0.5,
+    1.0,
+    2.0
+  ],
+  "gradient_clip_norm": 1.0,
+  "selected_epoch": 1,
+  "selection_metric": "mean_source_validation_macro_f1",
+  "selection_score": 0.05066996495567924,
+  "checkpoint_filename": "dan_dg_best.pt",
+  "target_images_loaded": false,
+  "target_labels_used": false,
+  "source_validation": {
+    "photo": {
+      "accuracy": 0.25748502994011974,
+      "macro_f1": 0.058503401360544216,
+      "loss": 1.9372384191273215,
+      "number_of_samples": 334
+    },
+    "art_painting": {
+      "accuracy": 0.21951219512195122,
+      "macro_f1": 0.05142857142857143,
+      "loss": 1.9431012874696312,
+      "number_of_samples": 410
+    },
+    "cartoon": {
+      "accuracy": 0.17270788912579957,
+      "macro_f1": 0.04207792207792208,
+      "loss": 1.9460180237857518,
+      "number_of_samples": 469
+    }
+  },
+  "aggregate_source_validation": {
+    "mean_accuracy": 0.21656837139595686,
+    "worst_accuracy": 0.17270788912579957,
+    "mean_macro_f1": 0.05066996495567924,
+    "worst_macro_f1": 0.04207792207792208
+  }
+}

@@ -1,0 +1,6 @@
+method:
+  name: erm
+  training_action: reuse_task2_source_only
+  retrain: false
+checkpoint:
+  external_filename: source_only_best.pt
