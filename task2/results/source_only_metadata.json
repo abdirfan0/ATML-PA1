@@ -1,0 +1,37 @@
+{
+  "method": "source_only",
+  "seed": 6304,
+  "selected_epoch": 11,
+  "selection_metric": "mean_source_validation_macro_f1",
+  "selection_score": 0.9449133669427949,
+  "checkpoint_filename": "source_only_best.pt",
+  "reused_as_task3_erm": true,
+  "target_images_used_during_training": false,
+  "target_labels_used": false,
+  "source_validation": {
+    "photo": {
+      "accuracy": 0.9640718562874252,
+      "macro_f1": 0.9568633845213893,
+      "loss": 0.10340073981327925,
+      "number_of_samples": 334
+    },
+    "art_painting": {
+      "accuracy": 0.9170731707317074,
+      "macro_f1": 0.9178150889325859,
+      "loss": 0.27637423660333565,
+      "number_of_samples": 410
+    },
+    "cartoon": {
+      "accuracy": 0.9573560767590619,
+      "macro_f1": 0.9600616273744097,
+      "loss": 0.1425783878196277,
+      "number_of_samples": 469
+    }
+  },
+  "aggregate_source_validation": {
+    "mean_accuracy": 0.9461670345927314,
+    "worst_accuracy": 0.9170731707317074,
+    "mean_macro_f1": 0.9449133669427949,
+    "worst_macro_f1": 0.9178150889325859
+  }
+}
