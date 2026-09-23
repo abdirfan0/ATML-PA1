@@ -1,0 +1,12 @@
+{
+  "model": "vanilla",
+  "percentile": 95,
+  "calibration_split": "cifar10_validation",
+  "cifar100_used": false,
+  "thresholds": {
+    "msp": 0.16056357324123383,
+    "mls": -5.903560161590576,
+    "energy": -6.083648681640625,
+    "mahalanobis": 3029.122777225638
+  }
+}

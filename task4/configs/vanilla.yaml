@@ -1,0 +1,12 @@
+method:
+  name: vanilla
+  number_of_outputs: 10
+  loss: cross_entropy
+  randaugment: false
+
+training:
+  initialize_from: random
+  maximum_epochs: 100
+
+checkpoint:
+  filename: vanilla_best.pt

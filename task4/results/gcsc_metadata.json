@@ -1,0 +1,25 @@
+{
+  "method": "gcsc",
+  "seed": 6304,
+  "initialization": "random",
+  "randaugment": {
+    "number_of_operations": 2,
+    "magnitude": 9
+  },
+  "selected_epoch": 99,
+  "selection_score": 0.9586,
+  "cifar10_validation": {
+    "accuracy": 0.9586,
+    "macro_f1": 0.9587026850433702
+  },
+  "cifar10_test": {
+    "accuracy": 0.9509,
+    "macro_f1": 0.9509568660773187
+  },
+  "mls_threshold": -6.411793231964111,
+  "known_test_acceptance_rate": 0.9472,
+  "checkpoint_filename": "gcsc_best.pt",
+  "cifar100_used_for_training": false,
+  "cifar100_used_for_selection": false,
+  "cifar100_used_for_threshold": false
+}

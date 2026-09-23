@@ -1,0 +1,40 @@
+method:
+  name: proser
+  number_of_known_classes: 10
+  number_of_dummy_classifiers: 5
+  total_outputs: 15
+
+initialization:
+  backbone_and_known_classifier: vanilla_best
+  dummy_classifiers: random
+
+training:
+  maximum_epochs: 50
+  batch_size: 128
+  optimizer: SGD
+  learning_rate: 0.001
+  momentum: 0.9
+  weight_decay: 0.0005
+  scheduler: cosine
+
+placeholder_learning:
+  classifier_placeholder_weight: 1.0
+  data_placeholder_weight: 0.1
+  beta: 1.0
+  gamma: 0.1
+  mixup_location: after_layer2
+  mixup_beta_alpha: 2.0
+  require_different_classes: true
+  first_half: classifier_placeholders
+  second_half: data_placeholders
+
+selection:
+  metric: cifar10_validation_accuracy
+  use_cifar100: false
+
+evaluation:
+  common_score: mls
+  additional_score: placeholder
+
+checkpoint:
+  filename: proser_best.pt

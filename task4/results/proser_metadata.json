@@ -1,0 +1,55 @@
+{
+  "method": "proser",
+  "seed": 6304,
+  "initial_checkpoint": "vanilla_best.pt",
+  "initial_vanilla_epoch": 95,
+  "number_of_known_classes": 10,
+  "number_of_dummy_classes": 5,
+  "fine_tuning_epochs": 50,
+  "optimizer": "SGD",
+  "learning_rate": 0.001,
+  "momentum": 0.9,
+  "weight_decay": 0.0005,
+  "scheduler": "CosineAnnealingLR",
+  "mixup_location": "after_layer2_before_layer3",
+  "mixup_alpha": 2.0,
+  "different_class_pairs": true,
+  "classifier_placeholder_weight": 1.0,
+  "data_placeholder_weight": 0.1,
+  "selected_epoch": 4,
+  "selection_metric": "validation_accuracy",
+  "selection_score": 0.9508,
+  "checkpoint_filename": "proser_best.pt",
+  "placeholder_score_temperature": 1024.0,
+  "threshold_percentile": 95,
+  "cifar100_used_during_training": false,
+  "cifar100_used_for_selection": false,
+  "closed_set_results": {
+    "validation": {
+      "accuracy": 0.9508,
+      "macro_f1": 0.9508619955057547,
+      "loss": 0.21082258959785105,
+      "number_of_samples": 5000
+    },
+    "test": {
+      "accuracy": 0.9465,
+      "macro_f1": 0.9465059090104868,
+      "loss": 0.21625662336349488,
+      "number_of_samples": 10000
+    }
+  },
+  "score_thresholds": {
+    "mls": {
+      "threshold": -5.327533698081968,
+      "validation_acceptance_rate": 0.95,
+      "known_test_acceptance_rate": 0.944,
+      "known_test_rejection_rate": 0.05600000000000005
+    },
+    "placeholder": {
+      "threshold": 5.8979168534279115e-05,
+      "validation_acceptance_rate": 0.95,
+      "known_test_acceptance_rate": 0.9449,
+      "known_test_rejection_rate": 0.05510000000000004
+    }
+  }
+}

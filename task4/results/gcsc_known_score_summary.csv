@@ -1,0 +1,2 @@
+model,score,threshold,validation_acceptance_rate,known_test_acceptance_rate,known_test_rejection_rate
+gcsc,mls,-6.411793231964111,0.95,0.9472,0.05279999999999996

@@ -1,0 +1,14 @@
+{
+  "mls": {
+    "threshold": -5.327533698081968,
+    "validation_acceptance_rate": 0.95,
+    "known_test_acceptance_rate": 0.944,
+    "known_test_rejection_rate": 0.05600000000000005
+  },
+  "placeholder": {
+    "threshold": 5.8979168534279115e-05,
+    "validation_acceptance_rate": 0.95,
+    "known_test_acceptance_rate": 0.9449,
+    "known_test_rejection_rate": 0.05510000000000004
+  }
+}

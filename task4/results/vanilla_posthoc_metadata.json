@@ -1,0 +1,35 @@
+{
+  "model": "vanilla",
+  "checkpoint_epoch": 95,
+  "scores": {
+    "msp": "1 - maximum softmax probability",
+    "mls": "negative maximum known-class logit",
+    "energy": "negative log-sum-exp of logits",
+    "mahalanobis": "minimum shared-diagonal Mahalanobis distance"
+  },
+  "mahalanobis": {
+    "training_features": "unaugmented CIFAR-10 training features",
+    "number_of_classes": 10,
+    "feature_dimension": 512,
+    "covariance": "shared diagonal",
+    "diagonal_epsilon": 1e-06
+  },
+  "threshold_calibration": {
+    "split": "CIFAR-10 validation",
+    "percentile": 95,
+    "accept_when": "unknownness <= threshold"
+  },
+  "cifar100_used": false,
+  "thresholds": {
+    "msp": 0.16056357324123383,
+    "mls": -5.903560161590576,
+    "energy": -6.083648681640625,
+    "mahalanobis": 3029.122777225638
+  },
+  "known_test_acceptance": {
+    "msp": 0.9466,
+    "mls": 0.9474,
+    "energy": 0.9482,
+    "mahalanobis": 0.9474
+  }
+}

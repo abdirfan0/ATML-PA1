@@ -1,0 +1,3 @@
+model,score,threshold,validation_acceptance_rate,known_test_acceptance_rate,known_test_rejection_rate
+proser,mls,-5.327533698081968,0.95,0.944,0.05600000000000005
+proser,placeholder,5.8979168534279115e-05,0.95,0.9449,0.05510000000000004

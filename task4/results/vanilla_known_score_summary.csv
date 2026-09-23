@@ -1,0 +1,5 @@
+model,score,threshold,validation_acceptance_rate,known_test_acceptance_rate,known_test_rejection_rate
+vanilla,msp,0.16056357324123383,0.95,0.9466,0.0534
+vanilla,mls,-5.903560161590576,0.95,0.9474,0.05259999999999998
+vanilla,energy,-6.083648681640625,0.95,0.9482,0.05179999999999996
+vanilla,mahalanobis,3029.122777225638,0.95,0.9474,0.05259999999999998

@@ -1,0 +1,209 @@
+{
+  "seed": 6304,
+  "known_dataset": "CIFAR-10 test",
+  "number_of_known_test_samples": 10000,
+  "unknown_dataset": "CIFAR-100 test",
+  "near_unknown_classes": [
+    "bus",
+    "pickup_truck",
+    "motorcycle",
+    "tractor",
+    "wolf",
+    "fox",
+    "leopard",
+    "camel"
+  ],
+  "far_unknown_classes": [
+    "bottle",
+    "bowl",
+    "chair",
+    "clock",
+    "keyboard",
+    "mushroom",
+    "sunflower",
+    "wardrobe"
+  ],
+  "number_of_near_samples": 800,
+  "number_of_far_samples": 800,
+  "cifar100_train_used": false,
+  "threshold_calibration": "95th percentile of CIFAR-10 validation unknownness",
+  "acceptance_rule": "accept when unknownness is less than or equal to the threshold",
+  "vanilla_posthoc_results": [
+    {
+      "model": "vanilla",
+      "score": "msp",
+      "near_auroc": 0.8036708750000001,
+      "far_auroc": 0.8939903125,
+      "all_unknown_auroc": 0.84883059375,
+      "threshold": 0.16056357324123383,
+      "known_test_acceptance_rate": 0.9466,
+      "near_rejection_rate": 0.2825,
+      "far_rejection_rate": 0.4375,
+      "all_unknown_rejection_rate": 0.36,
+      "near_fpr_at_95_tpr": 0.7175,
+      "far_fpr_at_95_tpr": 0.5625
+    },
+    {
+      "model": "vanilla",
+      "score": "mls",
+      "near_auroc": 0.7855546875,
+      "far_auroc": 0.891070375,
+      "all_unknown_auroc": 0.83831253125,
+      "threshold": -5.903560161590576,
+      "known_test_acceptance_rate": 0.9474,
+      "near_rejection_rate": 0.31875,
+      "far_rejection_rate": 0.54,
+      "all_unknown_rejection_rate": 0.429375,
+      "near_fpr_at_95_tpr": 0.68125,
+      "far_fpr_at_95_tpr": 0.45999999999999996
+    },
+    {
+      "model": "vanilla",
+      "score": "energy",
+      "near_auroc": 0.7856008125,
+      "far_auroc": 0.8918604375,
+      "all_unknown_auroc": 0.8387306250000001,
+      "threshold": -6.083648681640625,
+      "known_test_acceptance_rate": 0.9482,
+      "near_rejection_rate": 0.315,
+      "far_rejection_rate": 0.545,
+      "all_unknown_rejection_rate": 0.43,
+      "near_fpr_at_95_tpr": 0.685,
+      "far_fpr_at_95_tpr": 0.45499999999999996
+    },
+    {
+      "model": "vanilla",
+      "score": "mahalanobis",
+      "near_auroc": 0.7973716875,
+      "far_auroc": 0.910535625,
+      "all_unknown_auroc": 0.85395365625,
+      "threshold": 3029.122777225638,
+      "known_test_acceptance_rate": 0.9474,
+      "near_rejection_rate": 0.2925,
+      "far_rejection_rate": 0.46,
+      "all_unknown_rejection_rate": 0.37625,
+      "near_fpr_at_95_tpr": 0.7075,
+      "far_fpr_at_95_tpr": 0.54
+    }
+  ],
+  "trained_model_results": [
+    {
+      "model": "vanilla",
+      "score": "mls",
+      "closed_set_accuracy": 0.949400007724762,
+      "near_auroc": 0.7855546875,
+      "far_auroc": 0.891070375,
+      "all_unknown_auroc": 0.83831253125,
+      "threshold": -5.903560161590576,
+      "known_test_acceptance_rate": 0.9474,
+      "near_rejection_rate": 0.31875,
+      "far_rejection_rate": 0.54,
+      "all_unknown_rejection_rate": 0.429375,
+      "near_fpr_at_95_tpr": 0.68125,
+      "far_fpr_at_95_tpr": 0.45999999999999996
+    },
+    {
+      "model": "gcsc",
+      "score": "mls",
+      "closed_set_accuracy": 0.9509000182151794,
+      "near_auroc": 0.8105524375,
+      "far_auroc": 0.9002415,
+      "all_unknown_auroc": 0.8553969687499998,
+      "threshold": -6.411793231964111,
+      "known_test_acceptance_rate": 0.9472,
+      "near_rejection_rate": 0.36125,
+      "far_rejection_rate": 0.59875,
+      "all_unknown_rejection_rate": 0.48,
+      "near_fpr_at_95_tpr": 0.6387499999999999,
+      "far_fpr_at_95_tpr": 0.40125
+    },
+    {
+      "model": "proser",
+      "score": "mls",
+      "closed_set_accuracy": 0.9465000033378601,
+      "near_auroc": 0.7879140625000001,
+      "far_auroc": 0.87514575,
+      "all_unknown_auroc": 0.83152990625,
+      "threshold": -5.327533698081968,
+      "known_test_acceptance_rate": 0.944,
+      "near_rejection_rate": 0.32375,
+      "far_rejection_rate": 0.4975,
+      "all_unknown_rejection_rate": 0.410625,
+      "near_fpr_at_95_tpr": 0.67625,
+      "far_fpr_at_95_tpr": 0.5025
+    },
+    {
+      "model": "proser",
+      "score": "placeholder",
+      "closed_set_accuracy": 0.9465000033378601,
+      "near_auroc": 0.782530875,
+      "far_auroc": 0.8757105625,
+      "all_unknown_auroc": 0.82912071875,
+      "threshold": 5.8979168534279115e-05,
+      "known_test_acceptance_rate": 0.9449,
+      "near_rejection_rate": 0.3175,
+      "far_rejection_rate": 0.485,
+      "all_unknown_rejection_rate": 0.40125,
+      "near_fpr_at_95_tpr": 0.6825,
+      "far_fpr_at_95_tpr": 0.515
+    }
+  ],
+  "selected_failure_examples": [
+    {
+      "group": "near",
+      "dataset_index": 7133,
+      "unknown_class": "bus",
+      "predicted_known_index": 9,
+      "predicted_known_class": "truck",
+      "mls_score": -11.826656341552734,
+      "threshold": -5.903560161590576
+    },
+    {
+      "group": "near",
+      "dataset_index": 2064,
+      "unknown_class": "wolf",
+      "predicted_known_index": 5,
+      "predicted_known_class": "dog",
+      "mls_score": -11.731189727783203,
+      "threshold": -5.903560161590576
+    },
+    {
+      "group": "near",
+      "dataset_index": 4316,
+      "unknown_class": "pickup_truck",
+      "predicted_known_index": 9,
+      "predicted_known_class": "truck",
+      "mls_score": -11.55223274230957,
+      "threshold": -5.903560161590576
+    },
+    {
+      "group": "far",
+      "dataset_index": 5260,
+      "unknown_class": "sunflower",
+      "predicted_known_index": 2,
+      "predicted_known_class": "bird",
+      "mls_score": -11.358866691589355,
+      "threshold": -5.903560161590576
+    },
+    {
+      "group": "far",
+      "dataset_index": 2915,
+      "unknown_class": "wardrobe",
+      "predicted_known_index": 9,
+      "predicted_known_class": "truck",
+      "mls_score": -11.1066255569458,
+      "threshold": -5.903560161590576
+    },
+    {
+      "group": "far",
+      "dataset_index": 6673,
+      "unknown_class": "clock",
+      "predicted_known_index": 3,
+      "predicted_known_class": "cat",
+      "mls_score": -11.061924934387207,
+      "threshold": -5.903560161590576
+    }
+  ],
+  "rpl_completed": false,
+  "rpl_status": "Optional extension not attempted"
+}

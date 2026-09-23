@@ -1,0 +1,3 @@
+method,split,accuracy,macro_f1,loss,number_of_samples
+vanilla,validation,0.9516,0.9516012280101034,0.1910248524233699,5000
+vanilla,test,0.9494,0.949309541863655,0.19753594889640808,10000

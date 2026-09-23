@@ -1,0 +1,23 @@
+{
+  "method": "vanilla",
+  "seed": 6304,
+  "initialization": "random",
+  "number_of_known_classes": 10,
+  "selected_epoch": 95,
+  "selection_metric": "cifar10_validation_accuracy",
+  "selection_score": 0.9516,
+  "cifar10_validation": {
+    "accuracy": 0.9516,
+    "macro_f1": 0.9516012280101034,
+    "loss": 0.1910248524233699
+  },
+  "cifar10_test": {
+    "accuracy": 0.9494,
+    "macro_f1": 0.949309541863655,
+    "loss": 0.19753594889640808
+  },
+  "checkpoint_filename": "vanilla_best.pt",
+  "cifar100_used_for_training": false,
+  "cifar100_used_for_selection": false,
+  "mixed_precision": true
+}

@@ -1,0 +1,8 @@
+{
+  "model": "gcsc",
+  "score": "mls",
+  "percentile": 95,
+  "calibration_split": "cifar10_validation",
+  "threshold": -6.411793231964111,
+  "cifar100_used": false
+}

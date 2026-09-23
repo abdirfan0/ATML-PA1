@@ -1,0 +1,67 @@
+seed: 6304
+
+dataset:
+  known_dataset: CIFAR10
+  unknown_dataset: CIFAR100
+  validation_fraction: 0.10
+  number_of_known_classes: 10
+  image_size: 32
+
+normalization:
+  mean:
+    - 0.4914
+    - 0.4822
+    - 0.4465
+  standard_deviation:
+    - 0.2470
+    - 0.2435
+    - 0.2616
+
+model:
+  architecture: resnet18
+  initialization: random
+  first_convolution:
+    kernel_size: 3
+    stride: 1
+    padding: 1
+  initial_max_pool: false
+  feature_dimension: 512
+
+optimization:
+  optimizer: SGD
+  learning_rate: 0.1
+  momentum: 0.9
+  weight_decay: 0.0005
+  scheduler: cosine
+  batch_size: 128
+  maximum_epochs: 100
+  number_of_workers: 2
+
+selection:
+  metric: cifar10_validation_accuracy
+  use_cifar100: false
+
+evaluation:
+  threshold_percentile: 95
+  known_test_dataset: CIFAR10
+  unknown_test_dataset: CIFAR100
+
+unknown_groups:
+  near:
+    - bus
+    - pickup_truck
+    - motorcycle
+    - tractor
+    - wolf
+    - fox
+    - leopard
+    - camel
+  far:
+    - bottle
+    - bowl
+    - chair
+    - clock
+    - keyboard
+    - mushroom
+    - sunflower
+    - wardrobe
