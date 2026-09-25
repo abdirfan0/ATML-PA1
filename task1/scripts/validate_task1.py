@@ -138,8 +138,8 @@ def main():
     )
 
     report_check(
-        len(figure_files) == 10,
-        "Exactly 10 final figures exist",
+        len(figure_files) == 11,
+        "Exactly 11 final figures exist",
         failures,
     )
 
