@@ -1,0 +1,3 @@
+method,maximum_grl_strength,selected_epoch,source_selection_macro_f1,target_accuracy,target_macro_f1,target_accuracy_change_vs_source_only,number_of_target_samples
+dann_grl_0p1,0.1,13,0.9518411317192492,0.04224993637057776,0.013454860210762202,-0.6060066174599135,3929
+dann_grl_1p0,1.0,8,0.7632071544728826,0.18172562993128022,0.18434336180674718,-0.46653092389921097,3929

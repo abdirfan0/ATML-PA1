@@ -50,27 +50,27 @@
   "domain_separability": [
     {
       "method": "source_only",
-      "domain_accuracy": 0.98559670781893,
-      "domain_balanced_accuracy": 0.98559670781893,
-      "domain_roc_auc": 0.9996782333316397
+      "domain_accuracy": 0.9862637362637363,
+      "domain_balanced_accuracy": 0.9862637362637363,
+      "domain_roc_auc": 0.9996075353218211
     },
     {
       "method": "dan",
-      "domain_accuracy": 0.8888888888888888,
-      "domain_balanced_accuracy": 0.8888888888888888,
-      "domain_roc_auc": 0.9449778997104099
+      "domain_accuracy": 0.8516483516483516,
+      "domain_balanced_accuracy": 0.8516483516483516,
+      "domain_roc_auc": 0.931650766815602
     },
     {
       "method": "dann",
-      "domain_accuracy": 0.9979423868312757,
-      "domain_balanced_accuracy": 0.9979423868312758,
+      "domain_accuracy": 0.9986263736263736,
+      "domain_balanced_accuracy": 0.9986263736263736,
       "domain_roc_auc": 1.0
     },
     {
       "method": "cdan",
-      "domain_accuracy": 0.9917695473251029,
-      "domain_balanced_accuracy": 0.9917695473251029,
-      "domain_roc_auc": 0.9997798438584904
+      "domain_accuracy": 0.9848901098901099,
+      "domain_balanced_accuracy": 0.9848901098901099,
+      "domain_roc_auc": 0.9990414804975245
     }
   ]
 }
